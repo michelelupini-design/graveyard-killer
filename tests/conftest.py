@@ -76,7 +76,12 @@ def post(tmp_path: Path) -> Iterator[Callable[..., Run]]:
     for real in ("ffmpeg", "ffprobe"):
         found = shutil.which(real)
         if found:
-            (bin_dir / real).symlink_to(found)
+            link = bin_dir / Path(found).name
+            try:
+                link.symlink_to(found)
+            except OSError:
+                # Windows makes symlinks only with Developer Mode or admin rights.
+                shutil.copy(found, link)
     log = tmp_path / "calls.jsonl"
 
     def run(
