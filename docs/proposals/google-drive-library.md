@@ -24,7 +24,7 @@ The Entry's page body has no place in a row, so it becomes three extra columns a
 
 ## 2. Saving from the phone
 
-Open point: I still have to read `docs/adr/0004` in 0.4.0 to see what Notion's share sheet gives that the Claude app does not. What I tested on 11/11/2026 from the Claude app on Android: I pasted a reel link into the chat and Claude wrote the row into a Google Sheet through the Google Sheets connector, which runs on Claude's side and does not need the computer. I have not yet tried the share sheet from Instagram to the Claude app, nor the full Capture flow of the skill on Drive. Google has no share target that writes straight into a Sheet, so on Drive the phone path is the Claude app chat. If 0.4.0 moved away from it for a reason that also applies here, I'll say so in this section.
+Open point: I still have to read `docs/adr/0004` in 0.4.0 to see what Notion's share sheet gives that the Claude app does not. What I tested on 11/11/2026 from the Claude app on Android: I pasted a reel link into the chat and Claude wrote the row into a Google Sheet through the Google Sheets connector, which runs on Claude's side and does not need the computer. Later the same day I used Instagram's share sheet to send a reel to the Claude app on Android: the link arrived in the chat on its own, with no extra text, and Claude wrote its row into the Sheet the same way. I have not yet run the skill's own Capture flow on Drive. Google has no share target that writes straight into a Sheet, so on Drive the phone path is the Claude app chat. If 0.4.0 moved away from it for a reason that also applies here, I'll say so in this section.
 
 ## 3. Each operation of `library.md` on Drive
 
